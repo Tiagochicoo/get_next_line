@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/13 10:38:37 by tpereira          #+#    #+#             */
-/*   Updated: 2021/03/13 14:14:12 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/03/13 15:52:44 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <fcntl.h>
 #include "get_next_line.h"
 /*
-	gcc -Wall -Wextra -Werror -D BUFFER_SIZE=32 -fsanitize=address -g get_next_line.c get_next_line_utils.c main.c
+comment	gcc -Wall -Wextra -Werror -D BUFFER_SIZE=32 -fsanitize=address -g get_next_line.c get_next_line_utils.c main.c
 */
 
 int		main(int argc, char *argv[])
