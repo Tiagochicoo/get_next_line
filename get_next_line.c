@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 17:04:32 by tpereira          #+#    #+#             */
-/*   Updated: 2021/03/13 18:13:26 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/03/13 19:38:51 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ static	int	ft_saveline(char **save, char **line)
 	char **temp;
 
 	len = 0;
-	while ((*save)[len] != '\n' && (*s)[len] != '\0')
+	while ((*save)[len] != '\n' && (*save)[len] != '\0')
 		len++;
 	if ((*save)[len] == '\n')
 	{
 		*line = ft_substr(*save, 0, len);
-		temp = ft_strdup(&((*save)[len + ]1));
+		temp = ft_strdup(&((*save)[len + 1]));
 		free(*save);
 		*save = temp;
 	}
@@ -47,7 +47,7 @@ static	int	ft_output(char **save, char **line, int r, int fd)
 		return ;
 	}
 	else
-		return (ft_saveline(&s[fd], line));
+		return (ft_saveline(&save[fd], line));
 }
 
 int get_next_line(int fd, char **line)
