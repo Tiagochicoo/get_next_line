@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 17:04:32 by tpereira          #+#    #+#             */
-/*   Updated: 2021/03/13 19:38:51 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/03/13 19:47:34 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int get_next_line(int fd, char **line)
 	static char	save[OPEN_MAX];
 	char 		*temp;
 	char 		buff[BUFFER_SIZE];
-//↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ se houver erros return -1 ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+
 	if (fd < 0 || BUFFER_SIZE <= 0 || !line || read(fd, buff, 0) < 0)
 		return (-1);
 	while ((r = read(fd, buff, BUFFER_SIZE)) > 0)
