@@ -6,12 +6,12 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/13 09:57:33 by tpereira          #+#    #+#             */
-/*   Updated: 2021/03/17 16:37:04 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/03/17 16:37:41 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 # include <fcntl.h>
 # include <stdlib.h>
 # include <unistd.h>

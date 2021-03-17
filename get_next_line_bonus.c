@@ -6,11 +6,11 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 17:04:32 by tpereira          #+#    #+#             */
-/*   Updated: 2021/03/17 16:16:46 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/03/17 16:43:52 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 static	int	ft_saveline(char **save, char **line)
 {
