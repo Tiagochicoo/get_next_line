@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 17:04:32 by tpereira          #+#    #+#             */
-/*   Updated: 2021/03/17 16:43:52 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/03/17 17:49:56 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ static	int	ft_saveline(char **save, char **line)
 	int	len;
 	char *temp;
 
-	len = 0;
-	temp = NULL;
+	len = 0;	
 	while ((*save)[len] != '\n' && (*save)[len] != '\0')
 		len++;
 	if ((*save)[len] == '\n')
