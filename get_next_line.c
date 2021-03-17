@@ -6,7 +6,7 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 17:04:32 by tpereira          #+#    #+#             */
-/*   Updated: 2021/03/13 19:47:34 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/03/17 13:16:57 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,15 @@ static	int	ft_saveline(char **save, char **line)
 	char **temp;
 
 	len = 0;
+	temp = NULL;
 	while ((*save)[len] != '\n' && (*save)[len] != '\0')
 		len++;
 	if ((*save)[len] == '\n')
 	{
 		*line = ft_substr(*save, 0, len);
-		temp = ft_strdup(&((*save)[len + 1]));
+		*temp = ft_strdup(&((*save)[len + 1]));
 		free(*save);
-		*save = temp;
+		*save = *temp;
 	}
 	else
 	{
@@ -44,7 +45,7 @@ static	int	ft_output(char **save, char **line, int r, int fd)
 	else if (r == 0 && save[fd] == NULL)
 	{
 		*line = ft_strdup("");
-		return ;
+		return (0);
 	}
 	else
 		return (ft_saveline(&save[fd], line));
@@ -53,7 +54,7 @@ static	int	ft_output(char **save, char **line, int r, int fd)
 int get_next_line(int fd, char **line)
 {
 	int			r;
-	static char	save[OPEN_MAX];
+	static char	*save[OPEN_MAX];
 	char 		*temp;
 	char 		buff[BUFFER_SIZE];
 
