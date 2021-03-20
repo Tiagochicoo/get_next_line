@@ -111,30 +111,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(s3, s2, ft_strlen(s2) + ft_strlen(s1) + 1);
 	return (s3);
 }
-
-char	*ft_strdup(const char *s)
-{
-	int		i;
-	char	*dup;
-
-	if (!(dup = (char *)malloc((ft_strlen(s) + 1) * sizeof(char))))
-		return (NULL);
-	i = 0;
-	while (s[i] != '\0')
-	{
-		dup[i] = s[i];
-		i++;
-	}
-	dup[i] = '\0';
-	return (dup);
-}
-
-size_t		ft_strlen(const char *str)
-{
-	int i;
-	
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}

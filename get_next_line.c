@@ -6,16 +6,43 @@
 /*   By: tpereira <tpereira@42Lisboa.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 17:04:32 by tpereira          #+#    #+#             */
-/*   Updated: 2021/03/17 16:16:46 by tpereira         ###   ########.fr       */
+/*   Updated: 2021/03/20 11:09:46 by tpereira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-static	int	ft_saveline(char **save, char **line)
+char		*ft_strdup(const char *s)
 {
-	int	len;
-	char *temp;
+	int		i;
+	char	*dup;
+
+	if (!(dup = (char *)malloc((ft_strlen(s) + 1) * sizeof(char))))
+		return (NULL);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		dup[i] = s[i];
+		i++;
+	}
+	dup[i] = '\0';
+	return (dup);
+}
+
+size_t		ft_strlen(const char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
+
+static int	ft_saveline(char **save, char **line)
+{
+	int		len;
+	char	*temp;
 
 	len = 0;
 	temp = NULL;
@@ -51,12 +78,12 @@ static int	ft_output(char **save, char **line, int r, int fd)
 		return (ft_saveline(&save[fd], line));
 }
 
-int get_next_line(int fd, char **line)
+int			get_next_line(int fd, char **line)
 {
 	int			r;
 	static char	*save[OPEN_MAX];
-	char 		*temp;
-	char 		buff[BUFFER_SIZE + 1];
+	char		*temp;
+	char		buff[BUFFER_SIZE + 1];
 
 	if (fd < 0 || BUFFER_SIZE <= 0 || !line || read(fd, buff, 0) < 0)
 		return (-1);
